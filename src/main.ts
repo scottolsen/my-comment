@@ -4,7 +4,7 @@ const github = require('@actions/github');
 async function run() {
   try {
     const message = '[![Build Status](https://travis-ci.com/MerchantsBonding/verificator.svg?token=EFLg5mgWp9hjgktBDxrG&branch=verificator-runs)](https://travis-ci.com/MerchantsBonding/verificator)'
-    const github_token = core.getInput('GITHUB_TOKEN');
+    const github_token = core.getInput('token');
 
     const context = github.context;
     if (context.payload.pull_request == null) {
